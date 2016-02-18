@@ -3,8 +3,7 @@
 	'use strict';
 
 	module.exports = {
-		function: require('./function.js'),
-		utils: require('./utils')
+		serial: require('./serial.js')
 	};
 
 })(module);

@@ -3,7 +3,7 @@
 	'use strict';
 
 	module.exports = {
-		serial: require('./serial.js'),
+		fserial: require('./fserial.js'),
 		gserial: require('./gserial.js')
 	};
 

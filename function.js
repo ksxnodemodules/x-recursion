@@ -2,7 +2,7 @@
 ((module) => {
 	'use strict';
 
-	var serial = require('./utils/serial.js');
+	var serial = require('./utils/fserial.js');
 
 	var create = (...args) => {
 

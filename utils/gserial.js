@@ -4,11 +4,11 @@
 
 	const DEFAULT = (x) => x;
 
-	var serial = (fnlist, check, get) => (...args) => {
+	var serial = (fnlist, check, get) => function * (...args) {
 		for (let fn of fnlist) {
 			let res = fn(...args);
 			if (check(res)) {
-				return get(res);
+				yield * get(res);
 			}
 		}
 	};

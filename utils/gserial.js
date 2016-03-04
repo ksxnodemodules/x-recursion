@@ -9,7 +9,7 @@
 			for (let res of fn(...args)) {
 				if (check(res)) {
 					yield * get(res);
-					break;
+					return;
 				}
 			}
 		}

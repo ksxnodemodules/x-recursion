@@ -6,9 +6,11 @@
 
 	var serial = (fnlist, check, get) => function * (...args) {
 		for (let fn of fnlist) {
-			let res = fn(...args);
-			if (check(res)) {
-				yield * get(res);
+			for (let res of fn(...args)) {
+				if (check(res)) {
+					yield * get(res);
+					break;
+				}
 			}
 		}
 	};

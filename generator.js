@@ -18,6 +18,8 @@
 
 	}
 
+	module.exports = create;
+
 	function * getValue(object) {
 		if (object) {
 			let result = object.value;
